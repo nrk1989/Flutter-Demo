@@ -81,6 +81,22 @@ class HomePageState extends State<HomePage> {
         ),
       ),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: const Text('Awesome Snackbar!'),
+                action: SnackBarAction(
+                  label: 'Action',
+                  onPressed: () {
+                    // Code to execute.
+                  },
+                ),
+              ),
+            );
+          },
+          tooltip: 'Snackbar',
+          child: Icon(Icons.circle_notifications)),
     );
   }
 }
