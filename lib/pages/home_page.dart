@@ -11,7 +11,7 @@ class DrawerItem {
 
 class HomePage extends StatefulWidget {
   final drawerItems = [
-    new DrawerItem("Fragment 1", Icons.rss_feed),
+    new DrawerItem("Bottom Navigation", Icons.rss_feed),
     new DrawerItem("Fragment 2", Icons.local_pizza),
     new DrawerItem("Fragment 3", Icons.info)
   ];
@@ -28,7 +28,7 @@ class HomePageState extends State<HomePage> {
   _getDrawerItemWidget(int pos) {
     switch (pos) {
       case 0:
-        return new FirstFragment();
+        return new BottomBarNavigation();
       case 1:
         return new SecondFragment();
       case 2:
