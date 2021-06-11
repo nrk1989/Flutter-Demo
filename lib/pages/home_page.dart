@@ -1,6 +1,6 @@
-import 'package:demo/fragments/first_fragment.dart';
-import 'package:demo/fragments/second_fragment.dart';
-import 'package:demo/fragments/third_fragment.dart';
+import 'package:demo/fragments/bottom_navigation.dart';
+import 'package:demo/fragments/pager.dart';
+import 'package:demo/fragments/carousel.dart';
 import 'package:flutter/material.dart';
 
 class DrawerItem {
@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
   final drawerItems = [
     new DrawerItem("Bottom Navigation", Icons.rss_feed),
     new DrawerItem("Pager", Icons.local_pizza),
-    new DrawerItem("Fragment 3", Icons.info)
+    new DrawerItem("Carousel", Icons.info)
   ];
 
   @override
@@ -28,11 +28,12 @@ class HomePageState extends State<HomePage> {
   _getDrawerItemWidget(int pos) {
     switch (pos) {
       case 0:
-        return new BottomBarNavigation();
+        // return new BottomBarNavigation();
+        return new CarouselDemo();
       case 1:
         return new PageViewDemo();
       case 2:
-        return new ThirdFragment();
+        return new CarouselDemo();
 
       default:
         return new Text("Error");
